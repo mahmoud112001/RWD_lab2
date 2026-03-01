@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Boxes</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #121212;
+      }
+
+      .grid-container {
+        display: grid;
+        gap: 15px;
+        width: 400px;
+        height: 400px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        animation: rotate-back-forth 4s ease-in-out infinite;
+      }
+
+      .box {
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: background-color 0.5s ease;
+      }
+
+      /* Layout based on your drawing */
+      .b1-4 {
+        grid-row: 1 / span 2;
+        grid-column: 1;
+        background-color: #ff4d4d;
+      }
+
+      .b2-3 {
+        grid-row: 1;
+        grid-column: 2 / span 2;
+        background-color: #4d94ff;
+      }
+
+      .b5 {
+        grid-row: 2;
+        grid-column: 2;
+        background-color: #4dff88;
+      }
+
+      .b6-9 {
+        grid-row: 2 / span 2;
+        grid-column: 3;
+        background-color: #ff944d;
+      }
+
+      .b7-8 {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+        background-color: #b366ff;
+      }
+
+      @keyframes rotate-back-forth {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(45deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      @media (max-width: 700px) {
+        .b1-4 {
+          background-color: #00ced1;
+        }
+        .b2-3 {
+          background-color: #ff1493;
+        }
+        .b5 {
+          background-color: #ffd700;
+        }
+        .b6-9 {
+          background-color: #8a2be2;
+        }
+        .b7-8 {
+          background-color: #adff2f;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="box b1-4">1, 4</div>
+
+      <div class="box b2-3">2, 3</div>
+
+      <div class="box b5">5</div>
+
+      <div class="box b6-9">6, 9</div>
+
+      <div class="box b7-8">7, 8</div>
+    </div>
+  </body>
+</html>
