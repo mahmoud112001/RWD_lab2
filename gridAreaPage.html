@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Area Page</title>
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        min-height: 100vh;
+        color: white;
+        text-align: center;
+
+        grid-template-areas:
+          "header  header  header"
+          "sidenav main    sidebar"
+          "footer  footer  footer";
+
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 200px 1fr 200px;
+      }
+
+      header {
+        grid-area: header;
+        background-color: darkblue;
+        padding: 40px;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: darkblue;
+        padding: 40px;
+      }
+
+      .sidenav {
+        grid-area: sidenav;
+        background-color: darkgoldenrod;
+        padding: 60px 20px;
+      }
+
+      .main-content {
+        grid-area: main;
+        background-color: darkgreen;
+        padding: 60px 20px;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: darkgoldenrod;
+        padding: 60px 20px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          grid-template-areas:
+            "header"
+            "sidenav"
+            "main"
+            "sidebar"
+            "footer";
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+    <div class="sidenav">SIDENAV</div>
+    <div class="main-content">MAIN CONTENT</div>
+    <div class="sidebar">SIDEBAR</div>
+    <footer>FOOTER</footer>
+  </body>
+</html>
