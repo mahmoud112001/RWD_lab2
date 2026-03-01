@@ -1,3 +1,3 @@
 Rec Grid using Area : https://screenrec.com/share/PHW9s1nob7
-Rec Grid using rows and columns 
-Repo : 
+Rec Grid using rows and columns : https://screenrec.com/share/FrNWhUGSfy
+Repo : https://github.com/mahmoud112001/RWD_lab2
